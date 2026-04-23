@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coinscrap Finance × Eduba · Una lectura sobre dónde encaja la IA agéntica en vuestro {stack}</title>
+<meta name="description" content="Lanzasteis Smart Assistant con Google Cloud en agosto, el paper de IEEE aterrizó, y la prensa de enero dejó clara la hoja de ruta 2026: MCP, LatAm, 30% de ingreso internacional a fin de año. Esta página es una lectura concreta de dónde se rompe ese pipeline de integración.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for Coinscrap Finance &mdash; Emerge Americas 2026</span>
+</div>
+
+
+<!-- TOP NAV: navy band, white logo, language toggle -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brandmark" href="#" aria-label="Coinscrap Finance">
+      <img src="logo-coinscrap-white.svg" alt="Coinscrap Finance" width="180" height="52">
+    </a>
+    <nav class="lang-toggle" aria-label="Idioma">
+      <a href="#" data-lang="es" class="is-active" aria-current="true">ES</a>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <a href="#" data-lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">
+      <span class="only-es">Para el equipo de Coinscrap. eMerge Americas Miami 2026.</span>
+      <span class="only-en">For the Coinscrap team. eMerge Americas Miami 2026.</span>
+    </p>
+
+    <h1 class="headline">
+      <span class="only-es">Una lectura sobre dónde encaja la IA agéntica en vuestro <span class="brace">{</span>stack<span class="brace">}</span>.</span>
+      <span class="only-en">A read on where agentic AI actually fits in Coinscrap&rsquo;s <span class="brace">{</span>stack<span class="brace">}</span>.</span>
+    </h1>
+
+    <p class="sub">
+      <span class="only-es">Treinta minutos. Una hipótesis concreta sobre el pipeline de integración de COCO en bancos Tier&#8209;2 de LatAm, y por qué MCP resuelve la mitad, no todo.</span>
+      <span class="only-en">Thirty minutes. A specific hypothesis on the COCO integration pipeline at Tier&#8209;2 LatAm banks, and why MCP solves half of it, not all of it.</span>
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+        <span class="only-es">Agendar 30 min con Matt</span>
+        <span class="only-en">Book 30 min with Matt</span>
+      </a>
+      <span class="cta-meta">
+        <span class="only-es">Matt Creamer, CRO · Eduba</span>
+        <span class="only-en">Matt Creamer, CRO · Eduba</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+</section>
+
+<!-- CLIENT STRIP (echo of their credibility device) -->
+<section class="proofstrip">
+  <div class="container">
+    <p class="proofstrip-label">
+      <span class="only-es">Contexto</span>
+      <span class="only-en">Context</span>
+    </p>
+    <ul class="proofstrip-list">
+      <li>8B+ <span>
+        <span class="only-es">transacciones de entrenamiento</span>
+        <span class="only-en">training transactions</span>
+      </span></li>
+      <li>96%+ <span>
+        <span class="only-es">precisión de categorización</span>
+        <span class="only-en">categorization accuracy</span>
+      </span></li>
+      <li>17 <span>
+        <span class="only-es">categorías, 114+ subcategorías</span>
+        <span class="only-en">categories, 114+ subcategories</span>
+      </span></li>
+      <li>TÜV <span>
+        <span class="only-es">certificación en COCO <span class="brace">{</span>CO2<span class="brace">}</span></span>
+        <span class="only-en">certified COCO <span class="brace">{</span>CO2<span class="brace">}</span></span>
+      </span></li>
+      <li>20+ <span>
+        <span class="only-es">bancos y aseguradoras desplegadas</span>
+        <span class="only-en">banks and insurers in production</span>
+      </span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="only-es">Lo que ya está a la vista</span>
+      <span class="only-en">What&rsquo;s already on the record</span>
+    </h2>
+    <p class="lede">
+      <span class="only-es">Lanzasteis Smart Assistant con Google Cloud en agosto. El paper de IEEE sobre detección de periodicidad aterrizó. La prensa de enero dejó claro el plan de 2026: MCP, LatAm, 30% de ingreso internacional a fin de año. Ese plan depende de que muchos bancos Tier&#8209;2 integren COCO por su lado más rápido de lo que vuestro headcount actual puede sostener. Esta página es una lectura concreta sobre dónde se rompe ese pipeline, y qué haría una capa ligera de orquestación por encima.</span>
+      <span class="only-en">You launched the Smart Assistant with Google Cloud in August, the IEEE paper on periodicity detection landed, and the January press made the 2026 story clear: MCP, LatAm, 30% international revenue by year-end. That plan depends on a lot of new Tier&#8209;2 banks integrating COCO on their side faster than your current headcount can carry. This page is a specific read on where that integration pipeline breaks, and what a lighter orchestration layer above it would do.</span>
+    </p>
+  </div>
+</section>
+
+<!-- FRAME: 60/30/10 -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="only-es">El marco: 60 / 30 / 10</span>
+      <span class="only-en">The frame: 60 / 30 / 10</span>
+    </h2>
+    <p class="lede">
+      <span class="only-es">La mayoría de bancos a los que entráis ya tienen equipo de IA propio. No necesitan otra plataforma. Necesitan que COCO se vea como un conjunto de herramientas que su orquestador pueda llamar, con una historia de gobernanza que cumplimiento pueda defender.</span>
+      <span class="only-en">Most banks you walk into already have an AI team. They do not need a new platform. They need COCO to look like a set of tools their own orchestration layer can call, with a governance story their compliance team can defend.</span>
+    </p>
+
+    <div class="splitgrid">
+      <article class="splitcard">
+        <span class="pct">60%</span>
+        <h3 class="splith">
+          <span class="only-es">Código tradicional y fontanería de datos</span>
+          <span class="only-en">Traditional code and data plumbing</span>
+        </h3>
+        <p>
+          <span class="only-es">ETL desde el core, mapeo de esquemas, flujos de autenticación PSD2. No es un problema de modelo.</span>
+          <span class="only-en">ETL from the core, schema mapping, PSD2 auth flows. Not a model problem.</span>
+        </p>
+      </article>
+      <article class="splitcard">
+        <span class="pct">30%</span>
+        <h3 class="splith">
+          <span class="only-es">Lógica basada en reglas</span>
+          <span class="only-en">Rule-based logic</span>
+        </h3>
+        <p>
+          <span class="only-es">Excepciones de categoría, carve-outs por banco. No deberían vivir dentro de un modelo.</span>
+          <span class="only-en">Category overrides, bank-specific carve-outs. Does not belong inside a model.</span>
+        </p>
+      </article>
+      <article class="splitcard splitcard-accent">
+        <span class="pct">10%</span>
+        <h3 class="splith">
+          <span class="only-es">Trabajo agéntico real</span>
+          <span class="only-en">Genuine agentic work</span>
+        </h3>
+        <p>
+          <span class="only-es">Smart Assistant, hiper-personalización, el cálculo de COCO <span class="brace">{</span>CO2<span class="brace">}</span>. Aquí es donde ganáis.</span>
+          <span class="only-en">The Smart Assistant, hyper-personalization, the COCO <span class="brace">{</span>CO2<span class="brace">}</span> calculation. This is where you win.</span>
+        </p>
+      </article>
+    </div>
+
+    <p class="reading">
+      <span class="only-es">Hoy el 10% hace trabajo real. El 60 y el 30 siguen resolviéndose a mano, por vuestro equipo de forward-deployed, en cada banco nuevo. Ese es el coste de velocidad de implementación que vuestro CTO nombró en público.</span>
+      <span class="only-en">Today the ten percent is doing real work. The sixty and thirty are still handled manually, by your forward-deployed team, at every new bank. That is the implementation-velocity cost your CTO named in public.</span>
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="only-es">El caso análogo del lado de Eduba</span>
+      <span class="only-en">The closest analog on our side</span>
+    </h2>
+    <div class="casecard">
+      <p class="case-lead">
+        <span class="only-es">Un sistema multi-agente de cumplimiento, diseñado para un cliente en industria regulada. Quemaban más de 160 horas de trabajo de compliance por cada contrato de cliente. Tras rediseñar la capa de orquestación, el mismo trabajo se comprimió a menos de cinco minutos. El cliente ahora vende ese tiempo recuperado como el diferenciador del producto.</span>
+        <span class="only-en">A multi-agent compliance system we designed for a regulated-industry client. The client was burning 160+ hours of compliance work on every customer deal. After redesigning the orchestration layer, the same work collapsed to under five minutes, and the client now sells that saved time back to the customer as the product differentiator.</span>
+      </p>
+      <p class="case-mirror">
+        <span class="only-es">Aplicado a un piloto en un banco colombiano: el equipo de IA del banco hace la integración, COCO aparece como herramientas MCP, vuestro equipo envía la capa de personalización encima, y la conversación de procurement se acorta meses.</span>
+        <span class="only-en">Applied to a Colombian bank pilot: the bank&rsquo;s AI team does the integration, COCO shows up as MCP tools, your team ships the personalization layer on top, and the procurement conversation shortens by months.</span>
+      </p>
+      <div class="case-metric">
+        <span class="metric-num">160h <span class="metric-arrow" aria-hidden="true">→</span> &lt;5m</span>
+        <span class="metric-label">
+          <span class="only-es">Trabajo de compliance comprimido tras el rediseño de la orquestación</span>
+          <span class="only-en">Compliance work compressed after the orchestration redesign</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAPER / GOVERNANCE -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="only-es">La pieza de gobernanza</span>
+      <span class="only-en">The governance piece</span>
+    </h2>
+    <p class="lede">
+      <span class="only-es">La parte de gobernanza la cubre nuestro paper del Ethics Engine, una herramienta psicométrica para evaluar patrones ideológicos y morales en LLMs. Da al consejo de un banco una respuesta defendible a la pregunta sobre comportamiento del modelo. Útil al vender en bancos regulados ibéricos y latinoamericanos.</span>
+      <span class="only-en">The governance piece is covered in our Ethics Engine paper, a psychometric assessment tool for evaluating ideological and moral patterns in LLMs. It gives a bank&rsquo;s board a defensible answer to the model-behavior question. Useful when you are selling into regulated Iberian and LatAm banks.</span>
+    </p>
+    <ul class="linklist">
+      <li>
+        <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">
+          arxiv.org/abs/2510.11742
+        </a>
+        <span class="linklist-tag">
+          <span class="only-es">paper</span>
+          <span class="only-en">paper</span>
+        </span>
+      </li>
+      <li>
+        <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">
+          github.com/RinDig/AuditEngine
+        </a>
+        <span class="linklist-tag">
+          <span class="only-es">repositorio</span>
+          <span class="only-en">repository</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT A FIRST ENGAGEMENT LOOKS LIKE -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="only-es">Cómo se ve un primer engagement</span>
+      <span class="only-en">What a first engagement looks like</span>
+    </h2>
+    <ol class="steplist">
+      <li>
+        <span class="step-kicker">
+          <span class="only-es">Alcance</span>
+          <span class="only-en">Scope</span>
+        </span>
+        <span class="step-body">
+          <span class="only-es">Auditoría de orquestación sobre un piloto Tier&#8209;2 en Colombia, México o Perú. Sprint acotado, milestones visibles.</span>
+          <span class="only-en">Orchestration audit over one Tier&#8209;2 pilot in Colombia, Mexico or Peru. Scoped sprint, visible milestones.</span>
+        </span>
+      </li>
+      <li>
+        <span class="step-kicker">
+          <span class="only-es">Entregable</span>
+          <span class="only-en">Deliverable</span>
+        </span>
+        <span class="step-body">
+          <span class="only-es">Mapeo de COCO como conjunto de herramientas MCP consumibles, más los tres puntos donde MCP por sí solo no resuelve la integración.</span>
+          <span class="only-en">COCO mapped as a consumable MCP tool set, plus the three places MCP on its own will not solve the integration.</span>
+        </span>
+      </li>
+      <li>
+        <span class="step-kicker">
+          <span class="only-es">Resultado</span>
+          <span class="only-en">Outcome</span>
+        </span>
+        <span class="step-body">
+          <span class="only-es">Un playbook que vuestro equipo forward-deployed puede reutilizar en el siguiente banco sin reescribirlo desde cero.</span>
+          <span class="only-en">A playbook your forward-deployed team can reuse at the next bank without rewriting from scratch.</span>
+        </span>
+      </li>
+      <li>
+        <span class="step-kicker">
+          <span class="only-es">Partner de infra</span>
+          <span class="only-en">Infra partner</span>
+        </span>
+        <span class="step-body">
+          <span class="only-es">Si el trabajo pasa a tubería pesada (reconstruir ETL para un mercado nuevo), Eduba colabora con NLP Logix, en machine learning desde 2011 y con más de 150 científicos de datos, para la parte que vive por debajo de la capa de orquestación.</span>
+          <span class="only-en">If the work drops into heavy pipeline territory (rebuilding ETL for a new market), Eduba partners with NLP Logix, in machine learning since 2011 and over 150 data scientists, for the layer that sits below orchestration.</span>
+        </span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- CREDIBILITY LINE -->
+<section class="section section-alt credline">
+  <div class="container credline-inner">
+    <div>
+      <p class="credline-who">
+        <span class="only-es">Quién está al otro lado de esta página</span>
+        <span class="only-en">Who is on the other side of this page</span>
+      </p>
+      <p class="credline-body">
+        <span class="only-es">Jake Van Clief dirige Eduba. Veterano del Cuerpo de Marines. MSc Future Governance por la Universidad de Edimburgo. Publicaciones en ACM TiiS (ICM) y arXiv (Ethics Engine). 1,500+ personas formadas en Pacific Life, Colgate-Palmolive y KPMG UK (uno de los Big Four) desde mayo de 2025. También construyó una comunidad online que llegó a 22,000 miembros en cinco semanas.</span>
+        <span class="only-en">Jake Van Clief runs Eduba. Marine Corps veteran. MSc Future Governance from the University of Edinburgh. Published in ACM TiiS (ICM) and arXiv (Ethics Engine). 1,500+ people trained across Pacific Life, Colgate-Palmolive and KPMG UK (one of the Big Four) since May 2025. Jake also built an online community that grew to 22,000 members in five weeks.</span>
+      </p>
+      <p class="credline-matt">
+        <span class="only-es">Matt Creamer, CRO de Eduba. Habla por la sala.</span>
+        <span class="only-en">Matt Creamer, CRO at Eduba. Speaks for the room.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container cta-wrap">
+    <h2 class="cta-title">
+      <span class="only-es">30 minutos con Matt</span>
+      <span class="only-en">30 minutes with Matt</span>
+    </h2>
+    <p class="cta-body">
+      <span class="only-es">Traed un piloto de banco Tier&#8209;2 que queráis enviar en Q3 2026. Recorremos la integración y señalamos los tres sitios donde MCP por sí solo no la resuelve.</span>
+      <span class="only-en">Bring one Tier&#8209;2 bank pilot you want to ship in Q3 2026. We will walk the integration and flag the three places MCP on its own will not solve it.</span>
+    </p>
+    <a class="btn btn-primary btn-lg" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+      <span class="only-es">Reservar en el calendario de Matt</span>
+      <span class="only-en">Book on Matt&rsquo;s calendar</span>
+    </a>
+    <p class="cta-hint">
+      calendly.com/thecro-eduba/30min
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div class="prepared">Prepared by Eduba, <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></div>
+    <div class="footer-meta">
+      <span class="only-es">Preparado para Coinscrap Finance, eMerge Americas Miami 2026.</span>
+      <span class="only-en">Prepared for Coinscrap Finance, eMerge Americas Miami 2026.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('.lang-toggle a[data-lang]');
+    function setLang(lang) {
+      root.setAttribute('lang', lang);
+      buttons.forEach(function (btn) {
+        var active = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('is-active', active);
+        if (active) {
+          btn.setAttribute('aria-current', 'true');
+        } else {
+          btn.removeAttribute('aria-current');
+        }
+      });
+    }
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        setLang(btn.getAttribute('data-lang'));
+      });
+    });
+  })();
+</script>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by Coinscrap Finance.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
